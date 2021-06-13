@@ -28,7 +28,7 @@ img,fieldset {border:0 none; vertical-align: top;}
 
 /* 버튼 초기화 */
 button {border: 0; background-color: transparent; cursor: pointer; outline: none;}
-
+button:active {transform: scale(96.8%);}
 /* 반응형 */
 /* video, img {width: 100%;} */
 
