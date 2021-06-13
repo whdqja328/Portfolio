@@ -25,6 +25,7 @@
 
 
     /* Size */
+    --size-border-radius: 5px;
 }
 
 h1 {
@@ -53,4 +54,37 @@ p {
     font-weight: var(--weight-regular);
     color: var(--color-black);
     margin: 4px 0;
+}
+
+/* Nav */
+#nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-dark-blue);
+    color: var(--color-white);
+    padding: 20px 14px;
+}
+
+.nav_logo {
+    font-size: var(--font-medium);
+    font-weight: var(--weight-semi-bold)
+}
+
+.nav_menu {
+    display: flex;
+}
+
+.nav_menu_item {
+    border-radius: var(--size-border-radius);
+    padding: 8px 12px;
+    margin: 0 4px;
+}
+
+.nav_menu_item.on {
+    border: 1px solid #fff;
+}
+
+.nav_menu_item:hover {
+    background-color: var(--color-blue);
 }
