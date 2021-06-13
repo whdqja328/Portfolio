@@ -27,7 +27,7 @@ h1,h2,h3,h4,h5,h6 {font-size: 13px; font-weight: normal;}
 img,fieldset {border:0 none; vertical-align: top;}
 
 /* 버튼 초기화 */
-button {border: 0;}
+button {border: 0; background-color: transparent; cursor: pointer; outline: none;}
 
 /* 반응형 */
 /* video, img {width: 100%;} */

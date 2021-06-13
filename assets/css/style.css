@@ -31,7 +31,7 @@
 h1 {
     font-size: var(--font-large);
     font-weight: var(--weight-bold);
-    color: var(--color-black);
+    color: var(--color-white);
     margin: 16px 0;
 }
 
@@ -63,7 +63,7 @@ p {
     align-items: center;
     background-color: var(--color-dark-blue);
     color: var(--color-white);
-    padding: 20px 14px;
+    padding: 18px 14px;
 }
 
 .nav_logo {
@@ -87,4 +87,28 @@ p {
 
 .nav_menu_item:hover {
     background-color: var(--color-blue);
+}
+
+/* Home */
+#home {
+    background: url("../img/home_bg.png") center/cover no-repeat;
+    padding: 40px;
+    text-align: center;
+}
+
+#home .profile {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 2px solid var(--color-light-white);
+}
+
+#home .home_contact {
+    color: var(--color-white);
+    font-size: var(--font-regular);
+    font-weight: var(--weight-bold);
+    margin: 24px;
+    padding: 8px 12px;
+    border: 2px solid var(--color-white);
+    border-radius: var(--size-border-radius);
 }
