@@ -3,7 +3,9 @@
 body,div,ul,li,dl,dd,dt,ol,h1,h2,h3,h4,h5,h6,input,
 fieldset,legend,p,select,table,th,td,tr,textarea,button,form,figure,figcaption{
     margin:0; padding:0;}
-
+* {
+    box-sizing: border-box;
+}
 /* a 링크 초기화 */
 a {color: inherit; text-decoration: none; cursor: pointer;}
 /* a:hover {color: #fff;} */
@@ -28,7 +30,7 @@ img,fieldset {border:0 none; vertical-align: top;}
 button {border: 0;}
 
 /* 반응형 */
-video, img {width: 100%;}
+/* video, img {width: 100%;} */
 
 /* 가운데 영역 */
 .container {height: 100%; margin: 0 auto; /*background: rgba(0,0,0,0.6);*/}
