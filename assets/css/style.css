@@ -4,7 +4,7 @@
     /* #E8EAF6 #C5CAE9 #9FA8DA #7986CB #5C6BC0 #3F51B5 #3949AB #303F9F #283593 #1A237E #8C9EFF #536DFE #3D5AFE #304FFE */
     --color-white: #ffffff;
     --color-light-white: #E8EAF6;
-    --color-dark-blue: #283593;
+    --color-dark-blue: #1A237E;
     --color-light-blue: #5C6BC0;
     --color-blue: #3F51B5;
     --color-black: #35383d;
@@ -28,6 +28,9 @@
 
     /* Size */
     --size-border-radius: 5px;
+
+    /* Animation */
+    --animation-duration : 300ms;
 }
 
 h1 {
@@ -145,11 +148,14 @@ body {
     margin: 16px auto;
     border: 1px solid var(--color-dark-blue);
     border-radius: 50%;
-    transition: color .3s ease;
+}
+.major_icon i {
+    transition: all var(--animation-duration) ease;
 }
 
-.major_icon:hover {
-    color: var(--color-light-pink);
+.major_icon i:hover {
+    color: var(--color-dark-blue);
+    transform: rotate(-10deg) scale(1.1);
 }
 
 .major_title,.major_desc {
