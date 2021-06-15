@@ -122,10 +122,14 @@ p {
 
 /* section */
 .section {
-    padding: 50px;
+    padding: 50px 50px 66px 50px;
     text-align: center;
     margin: 0 auto;
+}
+
+.section_container {
     max-width: 1200px;
+    margin: 0 auto;
 }
 
 body {
@@ -135,7 +139,7 @@ body {
 .about_majors {
     display: flex;
     justify-content: space-between;
-    margin-top: 100px;
+    margin-top: 80px;
 }
 
 .major_icon {
@@ -166,3 +170,64 @@ body {
     font-size: var(--font-micro);
     width: 300px;
 }
+
+/* Skill */
+#skills { 
+    background-color: var(--color-light-white);
+}
+
+#skills .skill_tit{
+    color: var(--color-light-white);
+}
+
+.skill {
+    margin-bottom: 32px;
+}
+.skillset {
+    display: flex;
+    background-color: var(--color-light-gray);
+    color: var(--color-light-white);
+}
+
+.skillset_left {
+    flex-basis: 60%;
+    background-color: var(--color-dark-gray);
+    padding: 20px 40px;
+}
+
+.skill_desc {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skill_bar {
+    border-radius: 4px;
+    width: 100%;
+    height: 4px;
+    background-color: var(--color-light-gray);
+}
+
+.skill_value {
+    border-radius: 4px;
+    width: 70%;
+    height: 4px;
+    background-color: var(--color-light-blue);
+}
+
+.skillset_right {
+    flex-basis: 40%;
+}
+
+.tools {
+    background-color: var(--color-gray);
+}
+
+.tools,.etc {
+    padding: 20px;
+}
+
+.etc_list {
+    line-height: 50px;
+}
+
+/* Work */
