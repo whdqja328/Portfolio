@@ -15,7 +15,6 @@ document.addEventListener('scroll', () => {
 });
 
 const navMenu = document.querySelector('.nav_menu');
-
 navMenu.addEventListener('click', (event) => {
     const target = event.target;
     const link = target.dataset.link;
@@ -23,28 +22,32 @@ navMenu.addEventListener('click', (event) => {
     if (link == null) {
         return;
     }
-    console.log(event.target.dataset.link)
-
     scrollIntoView(link)
 });
 
 const homeContactBtn = document.querySelector('.home_contact');
 homeContactBtn.addEventListener('click', () => {
-    scrollIntoView('#contact')
+    scrollIntoView('#contact');
 });
 
 const home = document.querySelector('.home_container');
 const homeHeight = home.getBoundingClientRect().height;
-document.addEventListener('scroll',()=>{
+document.addEventListener('scroll', () => {
     home.style.opacity = 1 - window.scrollY / homeHeight;
 });
 
+const scrollTopBtn = document.querySelector('.scrolltop');
+document.addEventListener('scroll',()=>{
+    if(window.scrollY > homeHeight / 2){
+        scrollTopBtn.classList.add('on')
+    } else {
+        scrollTopBtn.classList.remove('on')
+    }
+});
 
-
-
-
-
-
+scrollTopBtn.addEventListener('click',()=>{
+    scrollIntoView('home');
+})
 
 const scrollIntoView = (sel) => {
     const scrollTo = document.getElementById(sel);

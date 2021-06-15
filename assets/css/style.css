@@ -375,6 +375,32 @@ p {
     color: var(--color-black);
 }
 
+.scrolltop {
+    opacity: 0;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    font-size: 30px;
+    line-height: 20px;
+    border-radius: 50%;
+    background-color: var(--color-blue);
+    color: var(--color-white);
+    transition: all var(--animation-duration) ease-in;
+    pointer-events: none;
+}
+
+.scrolltop:active {
+    transform: scale(.5);
+}
+
+.scrolltop.on {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* 반응형 */
 @media screen and (max-width: 768px) {
     .nav_toggle_btn {
         display: block;
