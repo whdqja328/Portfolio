@@ -12,6 +12,7 @@
     --color-gray: #616161;
     --color-light-gray: #94999d;
     --color-light-pink: #d6b8d9;
+    --color-orange: #e44d26;
 
     /* Font size */
     --font-large: 48px;
@@ -201,14 +202,14 @@ body {
 }
 
 .skill_bar {
-    border-radius: 4px;
+    border-radius: var(--size-border-radius);
     width: 100%;
     height: 4px;
     background-color: var(--color-light-gray);
 }
 
 .skill_value {
-    border-radius: 4px;
+    border-radius: var(--size-border-radius);
     width: 70%;
     height: 4px;
     background-color: var(--color-light-blue);
@@ -231,3 +232,98 @@ body {
 }
 
 /* Work */
+
+.work_categories {
+    margin: 40px;
+}
+.category_btn {
+    border: 1px solid var(--color-dark-gray);
+    border-radius: var(--size-border-radius);
+    font-size: var(--font-regular);
+    padding: 8px 48px;
+}
+
+.category_btn:active .category_count,
+.category_btn:hover .category_count {
+    opacity: 1;
+    top: 0;
+}
+
+
+.category_btn.on,
+.category_btn:hover {
+    background-color: var(--color-dark-blue);
+    color: var(--color-light-white);
+}
+
+.category_count {
+    background-color: var(--color-orange);
+    border-radius: 50%;
+    color: #fff;
+    display: inline-block;
+    line-height: 22px;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    top: -20px;
+    left: 4px;
+    opacity: 0;
+    transition:all var(--animation-duration) ease-in;
+}
+
+.work_projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 280px;
+    height: 250px;
+    margin: 2px;
+    background-color: var(--color-light-white);
+}
+
+.project .project_img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.project_desc {
+    position: absolute;
+    background-color: #111;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all var(--animation-duration) ease;
+}
+
+.project_desc h3,.project_desc span {
+    color: var(--color-white);
+}
+
+.project:hover .project_desc {
+    transform: translateY(0);
+    opacity: .8;
+}
+
+.project_desc h3::after {
+    content: '';
+    position: relative;
+    left: 50%;
+    width: 25px;
+    height: 2px;
+    margin: 8px 0 0 -12px;
+    background-color: var(--color-light-white);
+    display: block;
+}
