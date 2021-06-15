@@ -11,6 +11,7 @@ document.addEventListener('scroll', () => {
     } else {
         navbar.classList.remove('nav_dark')
     }
+
 });
 
 const navMenu = document.querySelector('.nav_menu');
@@ -28,11 +29,26 @@ navMenu.addEventListener('click', (event) => {
 });
 
 const homeContactBtn = document.querySelector('.home_contact');
-homeContactBtn.addEventListener('click',()=>{
+homeContactBtn.addEventListener('click', () => {
     scrollIntoView('#contact')
 });
 
-const scrollIntoView = (sel)=> {
+const home = document.querySelector('.home_container');
+const homeHeight = home.getBoundingClientRect().height;
+document.addEventListener('scroll',()=>{
+    home.style.opacity = 1 - window.scrollY / homeHeight;
+});
+
+
+
+
+
+
+
+
+const scrollIntoView = (sel) => {
     const scrollTo = document.getElementById(sel);
-    scrollTo.scrollIntoView({behavior: "smooth"});
+    scrollTo.scrollIntoView({
+        behavior: "smooth"
+    });
 }
