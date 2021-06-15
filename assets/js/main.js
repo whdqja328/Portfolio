@@ -4,13 +4,35 @@
 const navbar = document.querySelector('#nav');
 const navbarHeight = navbar.getBoundingClientRect().height;
 
-document.addEventListener('scroll',()=>{
-    console.log(window.scrollY)
-    console.log(navbarHeight)
+document.addEventListener('scroll', () => {
 
-    if(window.scrollY > navbarHeight){
+    if (window.scrollY > navbarHeight) {
         navbar.classList.add('nav_dark')
-    }else {
+    } else {
         navbar.classList.remove('nav_dark')
     }
 });
+
+const navMenu = document.querySelector('.nav_menu');
+
+navMenu.addEventListener('click', (event) => {
+    const target = event.target;
+    const link = target.dataset.link;
+
+    if (link == null) {
+        return;
+    }
+    console.log(event.target.dataset.link)
+
+    scrollIntoView(link)
+});
+
+const homeContactBtn = document.querySelector('.home_contact');
+homeContactBtn.addEventListener('click',()=>{
+    scrollIntoView('#contact')
+});
+
+const scrollIntoView = (sel)=> {
+    const scrollTo = document.getElementById(sel);
+    scrollTo.scrollIntoView({behavior: "smooth"});
+}

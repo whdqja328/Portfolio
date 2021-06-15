@@ -82,6 +82,7 @@ p {
     background-color: var(--color-dark-blue);
     color: var(--color-white);
     padding: 10px;
+    z-index: 10;
 }
 
 .nav_logo {
@@ -97,6 +98,7 @@ p {
     border-radius: var(--size-border-radius);
     padding: 8px 12px;
     margin: 0 4px;
+    cursor: pointer;
 }
 
 .nav_menu_item.on {
@@ -158,11 +160,11 @@ p {
 
 .about_majors {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-top: 80px;
 }
 .major {
-    width: 33.3333%;
+    width: 25%;
 }
 .major_icon {
     width: 170px;
