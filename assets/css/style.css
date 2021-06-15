@@ -7,7 +7,7 @@
     --color-dark-blue: #1A237E;
     --color-light-blue: #5C6BC0;
     --color-blue: #3F51B5;
-    --color-black: #35383d;
+    --color-black: black;
     --color-dark-gray: #4d4d4d;
     --color-gray: #616161;
     --color-light-gray: #94999d;
@@ -97,6 +97,15 @@ p {
     background-color: var(--color-blue);
 }
 
+.nav_toggle_btn {
+    display: none;
+    position: absolute;
+    top: 22px;
+    right: 14px;
+    font-size: 24px;
+    color: var(--color-white);
+}
+
 /* Home */
 #home {
     background: url("../img/home_bg.png") center/cover no-repeat;
@@ -131,11 +140,6 @@ p {
 .section_container {
     max-width: 1200px;
     margin: 0 auto;
-}
-
-body {
-    /* background-image: linear-gradient(to bottom,var(--color-white),var(--color-white),var(--color-light-white)); */
-    background-color: #111;
 }
 
 .about_majors {
@@ -353,4 +357,50 @@ body {
 .contact_links i:hover {
     transform: scale(1.1);
     color: var(--color-black);
+}
+
+@media screen and (max-width: 768px) {
+    .nav_toggle_btn {
+        display: block;
+    }
+
+    #nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav_menu {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        display: none;
+    }
+
+    .about_majors {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .major {
+        margin-bottom: 38px;
+    }
+
+    .skillset {
+        flex-direction: column;
+    }
+
+    .project {
+        flex-grow: 1;
+    }
+
+    .work_categories {
+        display: flex;
+        margin: 40px 0;
+        justify-content: space-between;
+    }
+    .category_btn {
+        padding: 0;
+        flex-basis: 25%;
+        
+    }
 }
