@@ -63,6 +63,13 @@ workBtnContainer.addEventListener('click', (e) => {
     if (filter == null) {
         return;
     }
+
+    // 해당 페이지 클래스 추가
+    const active = document.querySelector('.category_btn.active');
+    active.classList.remove('active')
+    const target = e.target.nodeName === 'BUTTON' ? e.target : e.target.parentNode;
+    target.classList.add('active');
+
     projectContainer.classList.add('animate')
 
     setTimeout(() => {
