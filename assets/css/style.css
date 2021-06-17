@@ -78,13 +78,6 @@ p {
     transition: all var(--animation-duration) ease;
 }
 
-#nav.nav_dark {
-    background-color: var(--color-dark-blue);
-    color: var(--color-white);
-    padding: 10px;
-    z-index: 10;
-}
-
 .nav_logo {
     font-size: var(--font-medium);
     font-weight: var(--weight-semi-bold)
@@ -115,7 +108,7 @@ p {
     display: none;
     position: absolute;
     top: 22px;
-    right: 14px;
+    right: 16px;
     font-size: 24px;
     color: var(--color-white);
 }
@@ -340,9 +333,11 @@ p {
     transition: all var(--animation-duration) ease;
 }
 
-.project_desc h3,.project_desc span {
-    color: var(--color-white);
+.project_desc h3 {
+    color: var(--color-orange);
 }
+
+.project_desc span {color: var(--color-white);}
 
 .project:hover .project_desc {
     transform: translateY(0);
@@ -353,9 +348,10 @@ p {
     content: '';
     position: relative;
     left: 50%;
-    width: 25px;
+    width: 50px;
     height: 2px;
-    margin: 8px 0 0 -12px;
+    transform: translateX(-50%);
+    margin: 8px 0;
     background-color: var(--color-light-white);
     display: block;
 }
@@ -410,12 +406,23 @@ p {
 @media screen and (max-width: 768px) {
     .nav_toggle_btn {
         display: block;
-        color: var(--color-blue);
+    }
+
+    #nav.nav_dark {
+        background-color: var(--color-dark-blue);
+        color: var(--color-white);
+        padding: 16px;
+        z-index: 10;
+    }
+
+    .nav_logo {
+        color: var(--color-white);
     }
 
     #nav {
         flex-direction: column;
         align-items: flex-start;
+        background-color: var(--color-blue);
     }
 
     .nav_menu {
@@ -423,6 +430,14 @@ p {
         text-align: center;
         width: 100%;
         display: none;
+    }
+
+    .nav_menu .nav_menu_item {
+       color: var(--color-white);
+    }
+
+    .nav_menu.on {
+        display: block;
     }
 
     .about_majors {

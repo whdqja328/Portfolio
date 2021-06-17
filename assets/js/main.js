@@ -15,7 +15,7 @@ document.addEventListener('scroll', () => {
 });
 
 // nav 버튼 클릭시 해당 섹션 이동
-const navMenu = document.querySelector('.nav_menu');
+const navMenu = document.querySelector('ul.nav_menu');
 navMenu.addEventListener('click', (event) => {
     const target = event.target;
     const link = target.dataset.link;
@@ -23,7 +23,14 @@ navMenu.addEventListener('click', (event) => {
     if (link == null) {
         return;
     }
+    navMenu.classList.remove('on');
     scrollIntoView(link)
+});
+
+// nav toggle 버튼
+const navToggleBtn = document.querySelector('.nav_toggle_btn');
+navToggleBtn.addEventListener('click',()=>{
+    navMenu.classList.toggle('on')
 });
 
 // contact 섹션 이동
