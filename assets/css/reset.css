@@ -12,7 +12,7 @@ a {color: inherit; text-decoration: none; cursor: pointer;}
 
 /* 폰트 초기화 */
 body, input, textarea, select, button, table {
-    font-family:'Noto Sans KR',sans-serif; font-size: 13px; line-height: 1.5;}
+    font-family:'Noto Sans KR',sans-serif; font-size: 16px; line-height: 1.5;}
 
 /* 폰트 스타일 초기화 */
 em,address {font-style: normal;}

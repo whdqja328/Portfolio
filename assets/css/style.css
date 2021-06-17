@@ -15,11 +15,11 @@
     --color-orange: #e44d26;
 
     /* Font size */
-    --font-large: 48px;
-    --font-medium: 28px;
-    --font-regular: 18px;
-    --font-small: 16px;
-    --font-micro: 14px;
+    --font-large: 3rem;
+    --font-medium: 2rem;
+    --font-regular: 1rem;
+    --font-small: 0.9rem;
+    --font-micro: 0.8rem;
 
     /* Font weight */
     --weight-bold: 700;
@@ -146,15 +146,17 @@ p {
 
 /* section */
 .section {
-    display: flex;
-    height: 100vh;
+    padding: 100px 15px;
     text-align: center;
+    height: 100vh;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .section_container {
     max-width: 1200px;
+    margin: 0 auto;
 }
 
 .about_majors {
@@ -311,7 +313,7 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 280px;
+    width: 20%;
     height: 250px;
     margin: 2px;
     background-color: var(--color-light-white);
@@ -412,12 +414,12 @@ p {
 
 /* 반응형 */
 @media screen and (max-width: 768px) {
+
+    html {
+        font-size: 13px;
+    }
     .nav_toggle_btn {
         display: block;
-    }
-
-    .section {
-        padding: 15px;
     }
 
     .nav_logo {
@@ -453,15 +455,21 @@ p {
         margin-bottom: 38px;
     }
 
+    .major_icon {
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+        font-size: 30px;
+    }
+
+    .major_title {
+        font-size: var(--font-regular);
+    }
+
     .skillset {
         flex-direction: column;
     }
-
-    .project {
-        flex-grow: 1;
-    }
     
-
     .work_categories {
         display: flex;
         margin: 40px 0;
@@ -469,6 +477,19 @@ p {
     }
     .category_btn {
         padding: 0;
-        flex-basis: 25%;
+        flex-basis: 24%;
     }
+
+    
+#work {
+    height: 100vh;
+}
+
+.section {
+    height: 100%;
+}
+#contact {
+    height: 100vh;
+    flex-direction: column
+}
 }
