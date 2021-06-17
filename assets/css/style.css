@@ -101,6 +101,9 @@ p {
     cursor: pointer;
     border: 1px solid transparent;
 }
+.nav_menu_item.white {
+    border: 1px solid #fff;
+}
 
 
 .nav_menu_item:hover {
