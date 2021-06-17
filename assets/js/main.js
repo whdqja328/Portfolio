@@ -110,9 +110,9 @@ const sectionIds = [
   let selectedNavIndex = 0;
   let selectedNavItem = navItems[0];
   function selectNavItem(selected) {
-    selectedNavItem.classList.remove('white');
+    selectedNavItem.classList.remove('on');
     selectedNavItem = selected;
-    selectedNavItem.classList.add('white');
+    selectedNavItem.classList.add('on');
   };
   
   function scrollIntoView(selector) {
