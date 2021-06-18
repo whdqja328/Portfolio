@@ -43,9 +43,9 @@ h3 { font-size: var(--font-regular); font-weight: var(--weight-regular); color: 
 p { font-size: var(--font-regular); font-weight: var(--weight-regular); color: var(--color-black); margin: 4px 0; } 
 
 /* scroll pager */
-.scroll_pager {position: fixed; top: 49%; right: 30px; background-color: var(--color-orange); width: 15px; text-align: center;}
-.page_item {cursor: pointer; width: 15px; height: 15px; display: inline-block; margin-bottom: 10px; border-radius: 15px; background-color: var(--color-white);}
-.page_item.on {background-color: var(--color-dark-blue);}
+.scroll_pager {position: fixed; top: 49%; right: 30px;  width: 15px; text-align: center;}
+.page_item {cursor: pointer; width: 15px; height: 15px; display: inline-block; margin-bottom: 10px; border-radius: 15px; background-color: var(--color-black); transition: all .3s ease;}
+.page_item.on {background-color: red; transform: scale(1.9);}
 .page_item:hover {background-color: var(--color-dark-blue);}
 
 
