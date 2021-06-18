@@ -176,5 +176,5 @@ window.addEventListener('wheel', () => {
     selectedNavIndex = pagerItems.length - 1;
   }
   selectNavItem(navItems[selectedNavIndex]);
-  selectNavItem(pagerItems[selectedNavIndex]);
+  selectPagerItem(pagerItems[selectedNavIndex]);
 });
