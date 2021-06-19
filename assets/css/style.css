@@ -1,7 +1,6 @@
 /* Global */
 :root {
     /* Color */
-    /* #E8EAF6 #C5CAE9 #9FA8DA #7986CB #5C6BC0 #3F51B5 #3949AB #303F9F #283593 #1A237E #8C9EFF #536DFE #3D5AFE #304FFE */
     --color-white: #ffffff;
     --color-light-white: #E8EAF6;
     --color-dark-blue: #1A237E;
@@ -26,7 +25,6 @@
     --weight-semi-bold: 500;
     --weight-regular: 400;
 
-
     /* Size */
     --size-border-radius: 5px;
 
@@ -44,9 +42,10 @@ p { font-size: var(--font-regular); font-weight: var(--weight-regular); color: v
 
 /* scroll pager */
 .scroll_pager {position: fixed; top: 49%; right: 30px;  width: 15px; text-align: center;}
-.page_item {cursor: pointer; width: 15px; height: 15px; display: inline-block; margin-bottom: 10px; border-radius: 15px; background-color: var(--color-black); transition: all .3s ease;}
-.page_item.on {background-color: red; transform: scale(1.9);}
-.page_item:hover {background-color: var(--color-dark-blue);}
+.page_item {cursor: pointer; width: 15px; height: 15px; display: inline-block; margin-bottom: 10px; border-radius: 15px; background-color: var(--color-light-pink); 
+    transition: all .3s ease;}
+.page_item.on {background-color: var(--color-blue); transform: scale(1.9);}
+.page_item:hover {background-color: var(--color-orange);}
 
 
 
@@ -149,16 +148,20 @@ p { font-size: var(--font-regular); font-weight: var(--weight-regular); color: v
 
 .project_desc h3 { color: var(--color-orange); } 
 
+.project_desc i {color: yellow;}
+
 .project_desc span { color: var(--color-white); } 
 
-.project:hover .project_desc { transform: translateY(0); opacity: .8; } 
+.project:hover .project_desc { transform: translateY(0); opacity: .9; } 
 
 .project_desc h3::after { content: ''; position: relative; left: 50%; width: 50px; height: 2px; transform: translateX(-50%); margin: 8px 0; background-color: var(--color-light-white); display: block; } 
 
 #contact { background-color: var(--color-dark-blue); } 
+#contact.section {flex-direction: column}
 
 #contact .title,
 .contact_email,
+.contact_tell,
 .contact_links,
 .contact_right { color: var(--color-light-white); } 
 
