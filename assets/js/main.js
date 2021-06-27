@@ -23,18 +23,6 @@ navMenu.addEventListener('click', (event) => {
   scrollIntoView(link)
 });
 
-const pagerMenu = document.querySelector('.scroll_pager');
-pagerMenu.addEventListener('click', (event) => {
-  const target = event.target;
-  const link = target.dataset.type;
-  if (link == null) {
-    return;
-  }
-  pagerMenu.classList.remove('on');
-  scrollIntoView(link)
-});
-
-
 // nav toggle 버튼
 const navToggleBtn = document.querySelector('.nav_toggle_btn');
 navToggleBtn.addEventListener('click', () => {
@@ -99,8 +87,6 @@ workBtnContainer.addEventListener('click', (e) => {
   }, 300);
 });
 
-// 스크롤 smooth 함수
-
 // IntersectionObserver API
 const sectionIds = [
   '#home',
@@ -115,8 +101,6 @@ const sections = sectionIds.map(id => document.querySelector(id));
 const navItems = sectionIds.map(id => document.querySelector(`[data-link="${id}"]`));
 const pagerItems = sectionIds.map(id => document.querySelector(`[data-type="${id}"]`));
 
-console.log(pagerItems)
-
 let selectedNavIndex = 0;
 let selectedNavItem = navItems[0];
 let selectdePageritem = pagerItems[0];
@@ -126,12 +110,6 @@ function selectNavItem(selected) {
   selectedNavItem = selected;
   selectedNavItem.classList.add('on');
 };
-
-function selectPagerItem(selected){
-  selectdePageritem.classList.remove('on');
-  selectdePageritem = selected;
-  selectdePageritem.classList.add('on');
-}
 
 function scrollIntoView(selector) {
   const scrollTo = document.querySelector(selector);
@@ -173,8 +151,6 @@ window.addEventListener('wheel', () => {
     document.body.clientHeight
   ) {
     selectedNavIndex = navItems.length - 1;
-    selectedNavIndex = pagerItems.length - 1;
   }
   selectNavItem(navItems[selectedNavIndex]);
-  selectPagerItem(pagerItems[selectedNavIndex]);
 });
