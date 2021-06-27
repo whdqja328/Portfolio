@@ -41,7 +41,7 @@ h3 { font-size: var(--font-regular); font-weight: var(--weight-regular); color: 
 p { font-size: var(--font-regular); font-weight: var(--weight-regular); color: var(--color-black); margin: 4px 0; } 
 
 /* scroll pager */
-.scroll_pager {position: fixed; top: 49%; right: 30px;  width: 15px; text-align: center;}
+.scroll_pager {position: fixed; top: 49%; right: 30px;  width: 15px; text-align: center; z-index: 10;}
 .page_item {cursor: pointer; width: 15px; height: 15px; display: inline-block; margin-bottom: 10px; border-radius: 15px; background-color: var(--color-light-pink); 
     transition: all .3s ease;}
 .page_item.on {background-color: var(--color-blue); transform: scale(1.9);}
@@ -76,10 +76,8 @@ p { font-size: var(--font-regular); font-weight: var(--weight-regular); color: v
 #home .home_contact { color: var(--color-white); font-size: var(--font-regular); font-weight: var(--weight-bold); margin: 24px; padding: 8px 12px; border: 2px solid var(--color-white); border-radius: var(--size-border-radius); } 
 
 /* section */
-.section { padding: 100px 15px; text-align: center; height: 100vh; display: flex; justify-content: center; align-items: center; } 
-
+.section { padding: 100px 15px; text-align: center; display: flex; justify-content: center; align-items: center; } 
 .section_container { max-width: 1200px; margin: 0 auto; } 
-
 .about_majors { display: flex; justify-content: space-between; width: 100%; margin-top: 50px; } 
 .major {margin-right: 140px;}
 .major:last-child {margin-right: 0;}
@@ -98,7 +96,7 @@ p { font-size: var(--font-regular); font-weight: var(--weight-regular); color: v
 #skills .skill_tit { color: var(--color-light-white); } 
 
 .skill { margin-bottom: 32px; } 
-.skillset { display: flex; background-color: var(--color-light-gray); color: var(--color-light-white); } 
+.skillset { display: flex; min-width: 1000px; width: 100%; background-color: var(--color-light-gray); color: var(--color-light-white); } 
 
 .skillset_left { flex-basis: 60%; background-color: var(--color-dark-gray); padding: 20px 40px; } 
 
@@ -111,6 +109,7 @@ p { font-size: var(--font-regular); font-weight: var(--weight-regular); color: v
 .skillset_right { flex-basis: 40%; } 
 
 .tools { background-color: var(--color-gray); } 
+.tools_list li {margin-top: 10px;}
 
 .tools,.etc { padding: 20px; } 
 
